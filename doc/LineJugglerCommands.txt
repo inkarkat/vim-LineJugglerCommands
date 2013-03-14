@@ -1,0 +1,82 @@
+*LineJugglerCommands.txt*	Commands to duplicate and move around lines.
+
+		   LINE JUGGLER COMMANDS    by Ingo Karkat
+						     *LineJugglerCommands.vim*
+description			|LineJugglerCommands-description|
+usage				|LineJugglerCommands-usage|
+installation			|LineJugglerCommands-installation|
+limitations			|LineJugglerCommands-limitations|
+known problems			|LineJugglerCommands-known-problems|
+todo				|LineJugglerCommands-todo|
+history				|LineJugglerCommands-history|
+
+==============================================================================
+DESCRIPTION				     *LineJugglerCommands-description*
+
+Most of the line manipulation mappings of the |LineJuggler.vim| plugin can
+also be done with built-in Ex commands like |:move|, |:put|, etc. This plugin
+adds those commands that do not exist (in a simple form) as built-in commands.
+Sometimes, a command is just more practical (e.g. in a script), more
+repeatable (from the command-line history), or offers different line
+addressing.
+Namely, this plugin provides a |:Swap| command to exchange two ranges of
+lines.
+
+SOURCE									     *
+
+Inspired by the following Stack Overflow question:
+    http://stackoverflow.com/questions/15296393/line-swapping-in-vim/15298132
+
+SEE ALSO								     *
+
+- This plugin is based on the functionality of the (required) |LineJugger.vim|
+  plugin (vimscript #4140), which offers many mappings to quickly duplicate
+  and move lines to above / below the current line.
+
+==============================================================================
+USAGE						   *LineJugglerCommands-usage*
+								       *:Swap*
+:[range]Swap {range}	Exchange the current line / line(s) given by [range]
+			with the lines in {range}.
+
+==============================================================================
+INSTALLATION				    *LineJugglerCommands-installation*
+
+This script is packaged as a |vimball|. If you have the "gunzip" decompressor
+in your PATH, simply edit the *.vmb.gz package in Vim; otherwise, decompress
+the archive first, e.g. using WinZip. Inside Vim, install by sourcing the
+vimball or via the |:UseVimball| command. >
+    vim LineJugglerCommands*.vmb.gz
+    :so %
+To uninstall, use the |:RmVimball| command.
+
+DEPENDENCIES				    *LineJugglerCommands-dependencies*
+
+- Requires Vim 7.0 or higher.
+- Requires the |ingo-library.vim| plugin (vimscript #4433), version 1.002 or
+  higher.
+- Requires the |LineJuggler.vim| plugin (vimscript #4140), version 1.22 or
+  higher.
+
+==============================================================================
+LIMITATIONS				     *LineJugglerCommands-limitations*
+
+KNOWN PROBLEMS				  *LineJugglerCommands-known-problems*
+
+TODO						    *LineJugglerCommands-todo*
+
+IDEAS						   *LineJugglerCommands-ideas*
+
+==============================================================================
+HISTORY						 *LineJugglerCommands-history*
+
+1.00	08-Mar-2013
+First published version.
+
+==============================================================================
+Copyright: (C) 2013 Ingo Karkat
+The VIM LICENSE applies to this script; see |copyright|.
+
+Maintainer:	Ingo Karkat <ingo@karkat.de>
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
