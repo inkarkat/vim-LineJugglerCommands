@@ -1,11 +1,7 @@
-if ! vimtest#features#SupportsNormalWithCount()
-    call vimtest#BailOut('All mappings of LineJuggler need support for :normal with count')
-endif
-
-runtime plugin/LineJuggler.vim
+runtime plugin/LineJugglerCommands.vim
 
 function! Quit()
-    normal! r*
+    execute "silent! normal! r*\<C-o>r#"
     call vimtest#SaveOut()
     call vimtest#Quit()
 endfunction
