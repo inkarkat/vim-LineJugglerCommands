@@ -4,7 +4,7 @@
 "   - LineJuggler.vim autoload script
 "   - ingo/err.vim autoload script
 "
-" Copyright: (C) 2013 Ingo Karkat
+" Copyright: (C) 2013-2014 Ingo Karkat
 "   The VIM LICENSE applies to this script; see ':help copyright'.
 "
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
@@ -35,7 +35,7 @@ function! LineJugglerCommands#Swap( startLnum, endLnum, targetRange )
     catch /^Vim\%((\a\+)\)\=:E492/ " E492: Not an editor command.
 	" When the passed range isn't valid.
 	call ingo#err#Set('Invalid range: ' . a:targetRange)
-    catch /^Vim\%((\a\+)\)\=:E/
+    catch /^Vim\%((\a\+)\)\=:/
 	" When the passed range isn't correct, e.g. "E78: Unknown mark".
 	call ingo#err#SetVimException()
     catch /^LineJuggler:/
