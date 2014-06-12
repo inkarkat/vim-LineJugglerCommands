@@ -38,6 +38,9 @@ USAGE						   *LineJugglerCommands-usage*
 								       *:Swap*
 :[range]Swap {range}	Exchange the current line / line(s) given by [range]
 			with the lines in {range}.
+								    *:Replace*
+:[range]Replace {range}	Replace the current line / line(s) given by [range]
+			with the lines in {range}.
 
 ==============================================================================
 INSTALLATION				    *LineJugglerCommands-installation*
@@ -55,7 +58,7 @@ DEPENDENCIES				    *LineJugglerCommands-dependencies*
 - Requires Vim 7.0 or higher.
 - Requires the |ingo-library.vim| plugin (vimscript #4433), version 1.002 or
   higher.
-- Requires the |LineJuggler.vim| plugin (vimscript #4140), version 1.22 or
+- Requires the |LineJuggler.vim| plugin (vimscript #4140), version 2.10 or
   higher.
 
 ==============================================================================
@@ -70,11 +73,15 @@ IDEAS						   *LineJugglerCommands-ideas*
 ==============================================================================
 HISTORY						 *LineJugglerCommands-history*
 
+1.10	11-Jun-2014
+- Add :Replace command.
+  *** You need to update to LineJuggler.vim (vimscript #4140) version 2.10! ***
+
 1.00	08-Mar-2013
 First published version.
 
 ==============================================================================
-Copyright: (C) 2013 Ingo Karkat
+Copyright: (C) 2013-2014 Ingo Karkat
 The VIM LICENSE applies to this plugin; see |copyright|.
 
 Maintainer:	Ingo Karkat <ingo@karkat.de>
