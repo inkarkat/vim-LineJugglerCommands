@@ -43,12 +43,15 @@ USAGE						   *LineJugglerCommands-usage*
 								    *:Replace*
 :[range]Replace {range}	Replace the current line / line(s) given by [range]
 			with the lines in {range}.
-							*:ReplaceWithRegister*
-:[range]ReplaceWithRegister [x]
+:[range]Replace [["]x]
 			Replace the current line / line(s) given by [range]
 			with the text from register [x]. This always works
 			|linewise|, like a combination of |:delete| and
 			|:put|.
+			Note: To use one of the numbered registers 1-9, you
+			need to prepend the optional double quotes ("1 - "9),
+			in order to disambiguate them from the absolute lines
+			1 - 9.
 
 ==============================================================================
 INSTALLATION				    *LineJugglerCommands-installation*
@@ -82,7 +85,8 @@ IDEAS						   *LineJugglerCommands-ideas*
 HISTORY						 *LineJugglerCommands-history*
 
 1.20	RELEASEME
-- Add :ReplaceWithRegister command.
+- ENH: Also allow to pass a [x] register to the :Replace command, and replace
+  the range with its contents.
 
 1.10	11-Jun-2014
 - Add :Replace command.
