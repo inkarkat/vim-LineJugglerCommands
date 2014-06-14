@@ -32,6 +32,8 @@ SEE ALSO								     *
 - This plugin is based on the functionality of the (required) |LineJugger.vim|
   plugin (vimscript #4140), which offers many mappings to quickly duplicate
   and move lines to above / below the current line.
+- ReplaceWithRegister.vim (vimscript #2703) provides normal and visual mode
+  |gr| commands that are similar to the |:ReplaceWithRegister| Ex command.
 
 ==============================================================================
 USAGE						   *LineJugglerCommands-usage*
@@ -41,6 +43,12 @@ USAGE						   *LineJugglerCommands-usage*
 								    *:Replace*
 :[range]Replace {range}	Replace the current line / line(s) given by [range]
 			with the lines in {range}.
+							*:ReplaceWithRegister*
+:[range]ReplaceWithRegister [x]
+			Replace the current line / line(s) given by [range]
+			with the text from register [x]. This always works
+			|linewise|, like a combination of |:delete| and
+			|:put|.
 
 ==============================================================================
 INSTALLATION				    *LineJugglerCommands-installation*
@@ -72,6 +80,9 @@ IDEAS						   *LineJugglerCommands-ideas*
 
 ==============================================================================
 HISTORY						 *LineJugglerCommands-history*
+
+1.20	RELEASEME
+- Add :ReplaceWithRegister command.
 
 1.10	11-Jun-2014
 - Add :Replace command.
