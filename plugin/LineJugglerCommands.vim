@@ -10,6 +10,7 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.20.004	15-Jun-2014	Combine :ReplaceWithRegister with :Replace.
 "   1.20.003	13-Jun-2014	Add :ReplaceWithRegister command (which has a
 "				distince implementation, but is nonetheless
 "				related).
@@ -24,16 +25,21 @@ let g:loaded_LineJugglerCommands = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+function! s:IsRegisterArgument( arguments )
+    return (a:arguments =~# '^$\|^[-a-zA-Z0":.%#*+~/]$\|^"[-a-zA-Z0-9":.%#*+~/]$\|^=')
+endfunction
+
 command! -bar -range -nargs=1 Swap
 \   call setline(<line1>, getline(<line1>)) |
 \   if ! LineJugglerCommands#Swap(<line1>, <line2>, <q-args>) | echoerr ingo#err#Get() | endif
-command! -bar -range -nargs=1 Replace
+command! -range -nargs=? Replace
 \   call setline(<line1>, getline(<line1>)) |
-\   if ! LineJugglerCommands#Replace(<line1>, <line2>, <q-args>) | echoerr ingo#err#Get() | endif
+\   if s:IsRegisterArgument(<q-args>) |
+\	if ! LineJugglerCommands#Register#Replace(<line1>, <line2>, <q-args>) | echoerr ingo#err#Get() | endif |
+\   else |
+\	if ! LineJugglerCommands#Replace(<line1>, <line2>, <q-args>) | echoerr ingo#err#Get() | endif |
+\   endif
 " Note: Don't use -register because that doesn't handle special ones like % and =.
-command! -bar -range -nargs=? ReplaceWithRegister
-\   call setline(<line1>, getline(<line1>)) |
-\   if ! LineJugglerCommands#Register#Replace(<line1>, <line2>, <q-args>) | echoerr ingo#err#Get() | endif
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
