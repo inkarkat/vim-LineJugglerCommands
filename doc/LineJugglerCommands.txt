@@ -20,7 +20,7 @@ Sometimes, a command is just more practical (e.g. in a script), more
 repeatable (from the command-line history), or offers different line
 addressing.
 Namely, this plugin provides a |:Swap| command to exchange two ranges of
-lines.
+lines (or with a register), and a similar |:Replace| command.
 
 SOURCE									     *
 
@@ -33,13 +33,17 @@ SEE ALSO								     *
   plugin (vimscript #4140), which offers many mappings to quickly duplicate
   and move lines to above / below the current line.
 - ReplaceWithRegister.vim (vimscript #2703) provides normal and visual mode
-  |gr| commands that are similar to the |:ReplaceWithRegister| Ex command.
+  |gr| commands that are similar to the |:Replace| Ex command.
 
 ==============================================================================
 USAGE						   *LineJugglerCommands-usage*
 								       *:Swap*
 :[range]Swap {range}	Exchange the current line / line(s) given by [range]
 			with the lines in {range}.
+:[range]Swap [["]x]	Exchange the current line / line(s) given by [range]
+			with the text from register [x]. This always works
+			|linewise|, like a combination of |:delete| [x] and
+			|:put|.
 								    *:Replace*
 :[range]Replace {range}	Replace the current line / line(s) given by [range]
 			with the lines in {range}.
@@ -48,6 +52,7 @@ USAGE						   *LineJugglerCommands-usage*
 			with the text from register [x]. This always works
 			|linewise|, like a combination of |:delete| and
 			|:put|.
+
 			Note: To use one of the numbered registers 1-9, you
 			need to prepend the optional double quotes ("1 - "9),
 			in order to disambiguate them from the absolute lines
@@ -87,6 +92,8 @@ HISTORY						 *LineJugglerCommands-history*
 1.20	RELEASEME
 - ENH: Also allow to pass a [x] register to the :Replace command, and replace
   the range with its contents.
+- ENH: Also allow to pass a [x] register to the :Swap command, and put the
+  range into the register and vice versa.
 
 1.10	11-Jun-2014
 - Add :Replace command.
