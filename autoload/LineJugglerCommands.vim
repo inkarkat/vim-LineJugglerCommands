@@ -3,6 +3,7 @@
 " DEPENDENCIES:
 "   - LineJuggler.vim autoload script
 "   - ingo/err.vim autoload script
+"   - ingo/range.vim autoload script
 "
 " Copyright: (C) 2013-2014 Ingo Karkat
 "   The VIM LICENSE applies to this script; see ':help copyright'.
@@ -10,6 +11,9 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.21.003	08-Aug-2014	Move LineJuggler#FoldClosed() and
+"				LineJuggler#FoldClosedEnd() into ingo-library as
+"				ingo#range#NetStart() and ingo#range#NetEnd().
 "   1.10.002	11-Jun-2014	Factor out s:RangeToLineNumbers() and turn the
 "				LineJugglerCommands#Swap() into a generic
 "				s:Invoke() that takes a Funcref.
@@ -36,8 +40,8 @@ function! s:Invoke( LineJuggerRangeFunction, isRangeTarget, startLnum, endLnum, 
     try
 	call s:RangeToLineNumbers(a:range)
 
-	let l:passedStartEnd = [LineJuggler#FoldClosed(a:startLnum), LineJuggler#FoldClosedEnd(a:endLnum)]
-	let l:rangeStartEnd  = [LineJuggler#FoldClosed(s:startLnum), LineJuggler#FoldClosedEnd(s:endLnum)]
+	let l:passedStartEnd = [ingo#range#NetStart(a:startLnum), ingo#range#NetEnd(a:endLnum)]
+	let l:rangeStartEnd  = [ingo#range#NetStart(s:startLnum), ingo#range#NetEnd(s:endLnum)]
 	call call(a:LineJuggerRangeFunction,
 	\   (a:isRangeTarget ?
 	\       l:passedStartEnd + l:rangeStartEnd :
