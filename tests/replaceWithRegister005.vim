@@ -2,6 +2,6 @@
 
 file temporary-filename
 12normal! w
-ReplaceWithRegister %
+Replace %
 
 call Quit()
