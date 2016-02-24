@@ -3,6 +3,6 @@
 
 let @" = '"" foobar'
 12normal! w
-ReplaceWithRegister
+Replace
 
 call Quit()
