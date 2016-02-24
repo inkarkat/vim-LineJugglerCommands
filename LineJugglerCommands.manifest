@@ -1,3 +1,4 @@
 autoload/LineJugglerCommands.vim
+autoload/LineJugglerCommands/Register.vim
 plugin/LineJugglerCommands.vim
 doc/LineJugglerCommands.txt
