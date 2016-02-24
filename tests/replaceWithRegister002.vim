@@ -3,6 +3,6 @@
 
 let @" = "\"\" multiple\n   lines\n   have been\n   added.\n"
 6normal! znwzN
-ReplaceWithRegister
+Replace
 
 call Quit()
