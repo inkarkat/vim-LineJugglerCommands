@@ -5,6 +5,6 @@
 call vimtest#StartTap()
 call vimtap#Plan(1)
 
-call vimtap#err#ErrorsLike('^E16: ', '11,9999ReplaceWithRegister', 'error shown')
+call vimtap#err#ErrorsLike('^E16: ', '11,9999Replace', 'error shown')
 
 call Quit()
