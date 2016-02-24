@@ -5,11 +5,6 @@
 call vimtest#StartTap()
 call vimtap#Plan(1)
 
-try
-    9,11Swap 7,9
-    call vimtap#Fail('expected error')
-catch
-    call vimtap#err#Thrown('Overlap in the ranges to swap', 'error shown')
-endtry
+call vimtap#err#Errors('Overlap in the ranges to swap', '9,11Swap 7,9', 'error shown')
 
 call Quit()
