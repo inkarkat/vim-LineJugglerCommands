@@ -50,7 +50,7 @@ function! s:Invoke( LineJuggerRangeFunction, isRangeTarget, startLnum, endLnum, 
 	\)
 
 	return 1
-    catch /^Vim\%((\a\+)\)\=:E492/ " E492: Not an editor command.
+    catch /^Vim\%((\a\+)\)\=:E492:/ " E492: Not an editor command.
 	" When the passed range isn't valid.
 	call ingo#err#Set('Invalid range: ' . a:range)
     catch /^Vim\%((\a\+)\)\=:/
