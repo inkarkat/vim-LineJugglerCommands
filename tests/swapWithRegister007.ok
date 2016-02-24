@@ -1,6 +1,8 @@
-my house is big
-my garden is green
-*y car is empty
+12 lines lines lines
+13 to experiment
+14     THREE-LINE block C start
+15     THREE-LINE block C middle
+*6     THREE-LINE block C end
 03     TWO-LINE block A start
 04     TWO-LINE block A end
 05 -- -- -- --
@@ -10,9 +12,8 @@ my garden is green
 09 just some text
 10 to fill the buffer
 11 and offer
-my house is big
-my garden is green
-#y car is empty
+29 --  --  --
+#0 last line
 17 -  -  -  -  -
 18     SINGLE LINE
 19 filler text
