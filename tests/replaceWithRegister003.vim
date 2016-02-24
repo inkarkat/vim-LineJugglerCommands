@@ -3,6 +3,6 @@
 
 call setreg('', "\"\" a \nquick\nred  \n  fox", "\<C-v>5")
 15normal! znwzN
-ReplaceWithRegister
+Replace
 
 call Quit()
