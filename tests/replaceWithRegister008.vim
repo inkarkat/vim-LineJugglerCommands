@@ -3,7 +3,7 @@
 
 let @" = "my house is big\n"
 
-29ReplaceWithRegister
-2ReplaceWithRegister
+29Replace
+2Replace
 
 call Quit()
