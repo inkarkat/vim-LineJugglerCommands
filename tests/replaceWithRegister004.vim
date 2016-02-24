@@ -4,7 +4,7 @@
 let @" = 'default'
 let @a = "\"a my sweet\n   dear\n"
 12normal! w
-ReplaceWithRegister a
+Replace a
 
 call vimtest#StartTap()
 call vimtap#Plan(2)
