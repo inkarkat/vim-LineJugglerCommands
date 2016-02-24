@@ -4,8 +4,8 @@
 
 let @" = "my house is big\nmy garden is green\nmy car is empty\n"
 
-29,30ReplaceWithRegister
-12,15ReplaceWithRegister
-1,2ReplaceWithRegister
+29,30Replace
+12,15Replace
+1,2Replace
 
 call Quit()
