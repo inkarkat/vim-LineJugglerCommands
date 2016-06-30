@@ -26,9 +26,9 @@
 26 }
 27 if (goo)
 28     iluminate();
-08 - - - - - -
+#8 - - - - - -
 09 just some text
 10 to fill the buffer
 11 and offer
 12 lines lines lines
-#3 to experiment
+*3 to experiment
