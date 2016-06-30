@@ -1,4 +1,4 @@
-01 first line
+#1 first line
 02 ---
 03     TWO-LINE block A start
 04     TWO-LINE block A end
@@ -27,4 +27,4 @@
 27 if (goo)
 28     iluminate();
 29 --  --  --
-#0 last line
+*0 last line
