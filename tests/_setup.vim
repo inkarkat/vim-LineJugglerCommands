@@ -1,6 +1,8 @@
 runtime plugin/LineJugglerCommands.vim
 
 function! Quit()
+    " Note: A "E19: Mark has invalid line number: means that the previous jump
+    " line doesn't exist any more.
     execute "silent! normal! r*\<C-o>r#"
     call vimtest#SaveOut()
     call vimtest#Quit()
