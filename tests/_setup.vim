@@ -1,9 +1,18 @@
 runtime plugin/LineJugglerCommands.vim
 
 function! Quit()
-    " Note: A "E19: Mark has invalid line number: means that the previous jump
-    " line doesn't exist any more.
-    execute "silent! normal! r*\<C-o>r#"
+    try
+	execute "normal! r*\<C-o>"
+    catch /^Vim\%((\a\+)\)\=:E19:/ " E19: Mark has invalid line number is due to a bug in :insert on an empty buffer that makes the jump mark invalid. Cp. https://github.com/vim/vim/issues/892
+	echomsg '**** Fixing invalid jump mark for older Vim versions'
+	let l:testName = fnamemodify(g:runVimTest, ':t:r')
+	if l:testName == 'replace012'
+	    29
+	else
+	    1
+	endif
+    endtry
+    normal! r#
     call vimtest#SaveOut()
     call vimtest#Quit()
 endfunction
