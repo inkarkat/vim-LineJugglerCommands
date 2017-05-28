@@ -1,3 +1,5 @@
+call vimtest#AddDependency('vim-ingo-library')
+
 runtime plugin/LineJugglerCommands.vim
 
 function! Quit()
