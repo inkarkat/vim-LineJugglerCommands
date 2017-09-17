@@ -11,6 +11,7 @@
 "
 " REVISION	DATE		REMARKS
 "   1.20.004	15-Jun-2014	Combine :ReplaceWithRegister with :Replace.
+"				ENH: Also allow [x] register argument for :Swap.
 "   1.20.003	13-Jun-2014	Add :ReplaceWithRegister command (which has a
 "				distince implementation, but is nonetheless
 "				related).
@@ -29,9 +30,13 @@ function! s:IsRegisterArgument( arguments )
     return (a:arguments =~# '^$\|^[-a-zA-Z0":.%#*+~/]$\|^"[-a-zA-Z0-9":.%#*+~/]$\|^=')
 endfunction
 
-command! -bar -range -nargs=1 Swap
+command! -range -nargs=? Swap
 \   call setline(<line1>, getline(<line1>)) |
-\   if ! LineJugglerCommands#Swap(<line1>, <line2>, <q-args>) | echoerr ingo#err#Get() | endif
+\   if s:IsRegisterArgument(<q-args>) |
+\	if ! LineJugglerCommands#Register#Swap(<line1>, <line2>, <q-args>) | echoerr ingo#err#Get() | endif |
+\   else |
+\	if ! LineJugglerCommands#Swap(<line1>, <line2>, <q-args>) | echoerr ingo#err#Get() | endif |
+\   endif
 command! -range -nargs=? Replace
 \   call setline(<line1>, getline(<line1>)) |
 \   if s:IsRegisterArgument(<q-args>) |
