@@ -1,15 +1,17 @@
 " LineJugglerCommands.vim: Commands to duplicate and move around lines.
 "
 " DEPENDENCIES:
+"   - LineJuggler.vim autoload script
 "   - LineJugglerCommands.vim autoload script
 "   - LineJugglerCommands/Register.vim autoload script
 "
-" Copyright: (C) 2013-2014 Ingo Karkat
+" Copyright: (C) 2013-2017 Ingo Karkat
 "   The VIM LICENSE applies to this script; see ':help copyright'.
 "
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.21.005	18-Sep-2017	Add :BlankLine command.
 "   1.20.004	15-Jun-2014	Combine :ReplaceWithRegister with :Replace.
 "				ENH: Also allow [x] register argument for :Swap.
 "   1.20.003	13-Jun-2014	Add :ReplaceWithRegister command (which has a
@@ -29,6 +31,14 @@ set cpo&vim
 function! s:IsRegisterArgument( arguments )
     return (a:arguments =~# '^$\|^[-a-zA-Z0":.%#*+~/]$\|^"[-a-zA-Z0-9":.%#*+~/]$\|^=')
 endfunction
+
+command! -bar -range=-1 -nargs=? BlankLine
+\   call setline(<line1>, getline(<line1>)) |
+\   if <q-args> !~# '^\d*$' |
+\       echoerr 'Not a count: ' . <q-args> |
+\   else |
+\       call LineJuggler#InsertBlankLine((<line2> == 1 ? <line1> : <line2>), str2nr(<q-args>), 1) |
+\   endif
 
 command! -range -nargs=? Swap
 \   call setline(<line1>, getline(<line1>)) |
