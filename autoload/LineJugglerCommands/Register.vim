@@ -4,12 +4,13 @@
 "   - ingo/err.vim autoload script
 "   - ingo/range.vim autoload script
 "
-" Copyright: (C) 2014 Ingo Karkat
+" Copyright: (C) 2014-2017 Ingo Karkat
 "   The VIM LICENSE applies to this script; see ':help copyright'.
 "
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.21.003	08-Nov-2017	Use ingo#range#IsEntireBuffer().
 "   1.20.002	15-Jun-2014	Parameterize
 "				LineJugglerCommands#Register#Replace() as
 "				s:ReplaceOrSwap() with a:isSwap argument to
@@ -18,7 +19,7 @@
 
 function! s:ReplaceOrSwap( startLnum, endLnum, register, isSwap )
     let l:register = substitute(a:register, '^"', '', '')
-    let l:isEntireBuffer = (a:startLnum <= 1 && a:endLnum == line('$'))
+    let l:isEntireBuffer = ingo#range#IsEntireBuffer(a:startLnum, a:endLnum)
     let l:isPutBelow = (! l:isEntireBuffer && a:endLnum == line('$'))
     try
 	if a:isSwap
