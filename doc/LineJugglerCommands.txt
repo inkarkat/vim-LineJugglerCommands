@@ -19,8 +19,9 @@ adds those commands that do not exist (in a simple form) as built-in commands.
 Sometimes, a command is just more practical (e.g. in a script), more
 repeatable (from the command-line history), or offers different line
 addressing.
-Namely, this plugin provides a |:Swap| command to exchange two ranges of
-lines (or with a register), and a similar |:Replace| command.
+Namely, this plugin provides a |:BlankLine| command, a |:Swap| command to
+exchange two ranges of lines (or with a register), and a similar |:Replace|
+command.
 
 SOURCE									     *
 
