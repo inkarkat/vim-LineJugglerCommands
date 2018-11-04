@@ -5,20 +5,10 @@
 "   - LineJugglerCommands.vim autoload script
 "   - LineJugglerCommands/Register.vim autoload script
 "
-" Copyright: (C) 2013-2017 Ingo Karkat
+" Copyright: (C) 2013-2018 Ingo Karkat
 "   The VIM LICENSE applies to this script; see ':help copyright'.
 "
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
-"
-" REVISION	DATE		REMARKS
-"   1.21.005	18-Sep-2017	Add :BlankLine command.
-"   1.20.004	15-Jun-2014	Combine :ReplaceWithRegister with :Replace.
-"				ENH: Also allow [x] register argument for :Swap.
-"   1.20.003	13-Jun-2014	Add :ReplaceWithRegister command (which has a
-"				distince implementation, but is nonetheless
-"				related).
-"   1.10.002	11-Jun-2014	Add :Replace command.
-"   1.00.001	08-Mar-2013	file creation
 
 " Avoid installing twice or when in unsupported Vim version.
 if exists('g:loaded_LineJugglerCommands') || (v:version < 700)
