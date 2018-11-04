@@ -5,21 +5,10 @@
 "   - ingo/err.vim autoload script
 "   - ingo/range.vim autoload script
 "
-" Copyright: (C) 2013-2014 Ingo Karkat
+" Copyright: (C) 2013-2018 Ingo Karkat
 "   The VIM LICENSE applies to this script; see ':help copyright'.
 "
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
-"
-" REVISION	DATE		REMARKS
-"   1.21.003	08-Aug-2014	Move LineJuggler#FoldClosed() and
-"				LineJuggler#FoldClosedEnd() into ingo-library as
-"				ingo#range#NetStart() and ingo#range#NetEnd().
-"   1.10.002	11-Jun-2014	Factor out s:RangeToLineNumbers() and turn the
-"				LineJugglerCommands#Swap() into a generic
-"				s:Invoke() that takes a Funcref.
-"				Implement :Replace via
-"				LineJugglerCommands#Replace().
-"   1.00.001	08-Mar-2013	file creation
 let s:save_cpo = &cpo
 set cpo&vim
 

@@ -90,7 +90,7 @@ below).
 HISTORY
 ------------------------------------------------------------------------------
 
-##### 1.21    RELEASEME
+##### 1.21    04-Nov-2018
 - Add :BlankLine command.
 - Move LineJuggler#FoldClosed() and LineJuggler#FoldClosedEnd() into
   ingo-library as ingo#range#NetStart() and ingo#range#NetEnd().
