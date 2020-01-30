@@ -1,11 +1,9 @@
 " LineJugglerCommands.vim: Commands to duplicate and move around lines.
 "
 " DEPENDENCIES:
-"   - LineJuggler.vim autoload script
-"   - LineJugglerCommands.vim autoload script
-"   - LineJugglerCommands/Register.vim autoload script
+"   - Requires Vim 7.0 or higher.
 "
-" Copyright: (C) 2013-2018 Ingo Karkat
+" Copyright: (C) 2013-2020 Ingo Karkat
 "   The VIM LICENSE applies to this script; see ':help copyright'.
 "
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
@@ -27,7 +25,7 @@ command! -bar -range=-1 -nargs=? BlankLine
 \   if <q-args> !~# '^\d*$' |
 \       echoerr 'Not a count: ' . <q-args> |
 \   else |
-\       call LineJuggler#InsertBlankLine((<line2> == 1 ? <line1> : <line2>), str2nr(<q-args>), 1) |
+\       call LineJuggler#InsertBlankLine((<count> == -1 ? <line1> : <line2>), str2nr(<q-args>), 1) |
 \   endif
 
 command! -range -nargs=? Swap

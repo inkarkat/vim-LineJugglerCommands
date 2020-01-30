@@ -1,4 +1,4 @@
-LINE JUGGLER COMMANDS   
+LINE JUGGLER COMMANDS
 ===============================================================================
 _by Ingo Karkat_
 
@@ -90,12 +90,18 @@ below).
 HISTORY
 ------------------------------------------------------------------------------
 
+##### 1.22    RELEASEME
+- Adapt: :BlankLine needs to check &lt;count&gt; == -1 instead of &lt;line2&gt; to
+  support current line as well as a lnum of 0 (since Vim 8.1.1241).
+
 ##### 1.21    04-Nov-2018
 - Add :BlankLine command.
 - Move LineJuggler#FoldClosed() and LineJuggler#FoldClosedEnd() into
   ingo-library as ingo#range#NetStart() and ingo#range#NetEnd().
-  __You need to update to ingo-library ([vimscript #4433](http://www.vim.org/scripts/script.php?script_id=4433)) version 1.033!__
-  __You need to update to LineJuggler.vim ([vimscript #4140](http://www.vim.org/scripts/script.php?script_id=4140)) version 1.21!__
+
+__You need to update to ingo-library ([vimscript #4433](http://www.vim.org/scripts/script.php?script_id=4433)) version 1.033!__
+
+__You need to update to LineJuggler.vim ([vimscript #4140](http://www.vim.org/scripts/script.php?script_id=4140)) version 1.21!__
 
 ##### 1.20    19-Jun-2014
 - ENH: Also allow to pass a [x] register to the :Replace command, and replace
@@ -105,13 +111,14 @@ HISTORY
 
 ##### 1.10    11-Jun-2014
 - Add :Replace command.
-  __You need to update to LineJuggler.vim ([vimscript #4140](http://www.vim.org/scripts/script.php?script_id=4140)) version 2.10!__
+
+__You need to update to LineJuggler.vim ([vimscript #4140](http://www.vim.org/scripts/script.php?script_id=4140)) version 2.10!__
 
 ##### 1.00    08-Mar-2013
 - First published version.
 
 ------------------------------------------------------------------------------
-Copyright: (C) 2013-2018 Ingo Karkat -
+Copyright: (C) 2013-2020 Ingo Karkat -
 The [VIM LICENSE](http://vimdoc.sourceforge.net/htmldoc/uganda.html#license) applies to this plugin.
 
-Maintainer:     Ingo Karkat <ingo@karkat.de>
+Maintainer:     Ingo Karkat &lt;ingo@karkat.de&gt;
