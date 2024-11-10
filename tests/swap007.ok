@@ -1,4 +1,4 @@
-01 first line
+#1 first line
 02 ---
 03     TWO-LINE block A start
 04     TWO-LINE block A end
@@ -11,7 +11,7 @@
 11 and offer
 12 lines lines lines
 13 to experiment
-#8     SINGLE LINE
+18     SINGLE LINE
 17 -  -  -  -  -
 14     THREE-LINE block C start
 15     THREE-LINE block C middle

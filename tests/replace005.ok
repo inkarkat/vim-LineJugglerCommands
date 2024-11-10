@@ -1,4 +1,4 @@
-01 first line
+#1 first line
 02 ---
 03     TWO-LINE block A start
 04     TWO-LINE block A end
@@ -14,7 +14,7 @@
 11 and offer
 12 lines lines lines
 *3 to experiment
-17 -  -# -  -  -
+17 -  -  -  -  -
 18     SINGLE LINE
 19 filler text
 20 and so on

@@ -1,11 +1,11 @@
-01 first line
+#1 first line
 02 ---
 03     TWO-LINE block A start
 04     TWO-LINE block A end
 05 -- -- -- --
 14     THREE-LINE block C start
 15     THREE-LINE block C middle
-#6     THREE-LINE block C end
+16     THREE-LINE block C end
 08 - - - - - -
 09 just some text
 10 to fill the buffer

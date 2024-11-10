@@ -1,4 +1,4 @@
-01 first line
+#1 first line
 02 ---
 03     TWO-LINE block A start
 04     TWO-LINE block A end
@@ -10,7 +10,7 @@
 10 to fill the buffer
 11 and offer
 *3 to experiment
-13 #o experiment
+13 to experiment
 14     THREE-LINE block C start
 15     THREE-LINE block C middle
 16     THREE-LINE block C end

@@ -1,6 +1,6 @@
 29 --  --  --
 *0 last line
-03     TWO-LINE block A start
+#3     TWO-LINE block A start
 04     TWO-LINE block A end
 05 -- -- -- --
 06     TWO-LINE block B start
@@ -9,7 +9,7 @@
 09 just some text
 10 to fill the buffer
 11 and offer
-#2 lines lines lines
+12 lines lines lines
 13 to experiment
 14     THREE-LINE block C start
 15     THREE-LINE block C middle

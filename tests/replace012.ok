@@ -1,4 +1,4 @@
-01 first line
+#1 first line
 02 ---
 03     TWO-LINE block A start
 04     TWO-LINE block A end
@@ -26,7 +26,7 @@
 26 }
 27 if (goo)
 28     iluminate();
-#8 - - - - - -
+08 - - - - - -
 09 just some text
 10 to fill the buffer
 11 and offer
