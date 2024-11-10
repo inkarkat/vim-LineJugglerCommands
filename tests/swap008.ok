@@ -1,4 +1,4 @@
-01 first line
+#1 first line
 02 ---
 03     TWO-LINE block A start
 04     TWO-LINE block A end
@@ -15,7 +15,7 @@
 17 -  -  -  -  -
 14     THREE-LINE block C start
 15     THREE-LINE block C middle
-#6     THREE-LINE block C end
+16     THREE-LINE block C end
 19 filler text
 20 and so on
 21 if (flag) {
