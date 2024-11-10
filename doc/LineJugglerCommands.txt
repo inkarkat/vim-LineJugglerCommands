@@ -105,7 +105,7 @@ below).
 ==============================================================================
 HISTORY						 *LineJugglerCommands-history*
 
-1.22	RELEASEME
+1.22	10-Nov-2024
 - Adapt: :BlankLine needs to check <count> == -1 instead of <line2> to
   support current line as well as a lnum of 0 (since Vim 8.1.1241).
 
@@ -130,7 +130,7 @@ HISTORY						 *LineJugglerCommands-history*
 First published version.
 
 ==============================================================================
-Copyright: (C) 2013-2020 Ingo Karkat
+Copyright: (C) 2013-2024 Ingo Karkat
 The VIM LICENSE applies to this plugin; see |copyright|.
 
 Maintainer:	Ingo Karkat <ingo@karkat.de>
