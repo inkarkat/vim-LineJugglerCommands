@@ -90,7 +90,7 @@ below).
 HISTORY
 ------------------------------------------------------------------------------
 
-##### 1.22    RELEASEME
+##### 1.22    10-Nov-2024
 - Adapt: :BlankLine needs to check &lt;count&gt; == -1 instead of &lt;line2&gt; to
   support current line as well as a lnum of 0 (since Vim 8.1.1241).
 
@@ -118,7 +118,7 @@ __You need to update to LineJuggler.vim ([vimscript #4140](http://www.vim.org/sc
 - First published version.
 
 ------------------------------------------------------------------------------
-Copyright: (C) 2013-2020 Ingo Karkat -
+Copyright: (C) 2013-2024 Ingo Karkat -
 The [VIM LICENSE](http://vimdoc.sourceforge.net/htmldoc/uganda.html#license) applies to this plugin.
 
 Maintainer:     Ingo Karkat &lt;ingo@karkat.de&gt;
